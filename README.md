@@ -21,7 +21,8 @@ bot-specific documentation for more details.
 
 ### SHIPS route
 
-- (bot command) (http request) what does it do?
+> (bot command) (http request) what does it do?
+
 - (^ships @{another user or omit for self}) (GET /ships/:user_id) retrieves a list of ships owned by the target user.
 - (^ships {unique ship name}) (GET /ships/:ship_name) retrieves information about a specific ship, including name, stats, and parts
 - (^ships dismantle {unique ship name}) (DELETE /ships/:ship_name) deletes the ship with the given name.
