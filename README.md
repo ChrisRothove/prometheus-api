@@ -17,6 +17,8 @@ bot-specific documentation for more details.
 
 > Minimum Viable Product
 
+[Ships route](#ships-route)
+
 ### SHIPS route
 
 - (bot command) (http request) what does it do?
