@@ -145,14 +145,8 @@ dist/
 tmp/
 temp/
 
-# End of https://www.toptal.com/developers/gitignore/api/node,git,dotenv
-
-
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
-
 ### VisualStudioCode ###
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
