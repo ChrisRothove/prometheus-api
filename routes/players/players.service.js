@@ -15,8 +15,16 @@ function create(input) {
   return knex("players").insert(input, "*");
 }
 
+function read(player_discord_id) {
+  return knex("players")
+    .select("*")
+    .where("player_discord_id", player_discord_id)
+    .then((created) => created[0]);
+}
+
 module.exports = {
   list,
   update,
   create,
+  read,
 };

@@ -19,3 +19,10 @@ function listStarterShips() {
 function listTypes(ship_class) {
   return knex("ship_types").select("*").where("ship_class", ship_class);
 }
+
+module.exports = {
+  listByServer,
+  listByPlayer,
+  listStarterShips,
+  listTypes,
+};
