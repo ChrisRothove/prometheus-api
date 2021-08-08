@@ -6,6 +6,7 @@ exports.up = function (knex) {
     table.integer("base_armor");
     table.integer("base_energy");
     table.integer("base_speed");
+    table.string("ship_class");
     table.integer("cost");
     table.timestamps(true, true);
   });
