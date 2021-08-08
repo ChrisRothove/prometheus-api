@@ -1,7 +1,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable("ships", function (table) {
     table.increments("ship_id").primary();
-    table.string("ship_name").unique();
+    table.string("ship_name");
     table.integer("ship_power");
     table.integer("ship_energy");
     table.integer("ship_armor");
@@ -20,8 +20,8 @@ exports.up = function (knex) {
     table.foreign("ship_wings").references("players_parts.slot_id");
     table.integer("ship_cockpit");
     table.foreign("ship_cockpit").references("players_parts.slot_id");
-    table.integer("ship_type");
-    table.foreign("ship_type").references("ship_types.type_id");
+    table.integer("player_discord_id");
+    table.foreign("player_discord_id").references("players.player_discord_id");
   });
 };
 

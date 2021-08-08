@@ -1,7 +1,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable("players", function (table) {
     table.increments("player_id").primary();
-    table.string("player_discord_id");
+    table.integer("player_discord_id").unique();
     table.integer("player_level");
     table.integer("player_exp");
     table.integer("credits");
