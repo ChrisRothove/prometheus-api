@@ -20,9 +20,17 @@ function listTypes(ship_class) {
   return knex("ship_types").select("*").where("ship_class", ship_class);
 }
 
+function newShip(player_discord_id, details) {
+  return knex("ships").insert({
+    ...details,
+    player_discord_id: player_discord_id,
+  });
+}
+
 module.exports = {
   listByServer,
   listByPlayer,
   listStarterShips,
   listTypes,
+  newShip,
 };

@@ -1,9 +1,12 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
+const controller = require("./ships.controller");
+const methodNotAllowed = require("../../errors/methodNotAllowed");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router
+  .route("/:player_discord_id/ships")
+  .post(controller.pickStarterShip)
+  .all(methodNotAllowed);
 
 module.exports = router;
