@@ -35,7 +35,7 @@ async function playerShouldNotExist(req, res, next) {
 
 async function newPlayer(req, res, next) {
   const starterShips = await shipsService.listStarterShips();
-  await playersService.create({ discord_player_id: res.locals.id });
+  await playersService.create({ player_discord_id: res.locals.id });
   res.status(201).json({ data: starterShips });
 }
 
