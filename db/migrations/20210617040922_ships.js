@@ -20,7 +20,7 @@ exports.up = function (knex) {
     table.foreign("ship_wings").references("players_parts.slot_id");
     table.integer("ship_cockpit");
     table.foreign("ship_cockpit").references("players_parts.slot_id");
-    table.integer("player_discord_id");
+    table.string("player_discord_id");
     table.foreign("player_discord_id").references("players.player_discord_id");
   });
 };

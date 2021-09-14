@@ -3,8 +3,8 @@ exports.up = function (knex) {
     table.increments("slot_id").primary();
     table.integer("part_id").unsigned();
     table.foreign("part_id").references("parts.part_id");
-    table.integer("player_id");
-    table.foreign("player_id").references("players.player_id");
+    table.string("player_discord_id");
+    table.foreign("player_discord_id").references("players.player_discord_id");
     table.timestamps(true, true);
   });
 };
